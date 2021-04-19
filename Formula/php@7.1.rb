@@ -30,6 +30,7 @@ class PhpAT71 < Formula
   depends_on "glib"
   depends_on "gmp"
   depends_on "icu4c"
+  depends_on "imap-uw"
   depends_on "jpeg"
   depends_on "libpng"
   depends_on "libpq"
@@ -142,6 +143,8 @@ class PhpAT71 < Formula
       --with-gmp=#{Formula["gmp"].opt_prefix}
       --with-iconv#{headers_path}
       --with-icu-dir=#{Formula["icu4c"].opt_prefix}
+      --with-imap-ssl=#{Formula["openssl@1.1"].opt_prefix} 
+      --with-imap=#{Formula["imap-uw"].opt_prefix}
       --with-jpeg-dir=#{Formula["jpeg"].opt_prefix}
       --with-kerberos#{headers_path}
       --with-layout=GNU
